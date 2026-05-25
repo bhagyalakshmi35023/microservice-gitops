@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: order-service
+  namespace: argocd
+
+spec:
+  project: order-service
+
+  source:
+    repoURL: https://github.com/bhagyalakshmi35023/microservice-gitops
+    targetRevision: main
+    path: order-service
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

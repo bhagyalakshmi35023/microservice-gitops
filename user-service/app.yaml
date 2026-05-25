@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: user-service
+  namespace: argocd
+
+spec:
+  project: user-service
+
+  source:
+    repoURL: https://github.com/bhagyalakshmi35023/microservice-gitops
+    targetRevision: main
+    path: user-service
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
