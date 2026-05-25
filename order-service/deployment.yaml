@@ -14,7 +14,7 @@ spec:
     spec:
       containers:  # Define the container for the order-service
       - name: order-service
-        image: bhagya1304/order-service:1
+        image: bhagya1304/order-service:8
         ports:
         - containerPort: 3000
 ---
