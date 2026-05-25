@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: user-service
-        image: bhagya1304/user-service:11
+        image: bhagya1304/user-service:14
         ports:
         - containerPort: 3000
 
