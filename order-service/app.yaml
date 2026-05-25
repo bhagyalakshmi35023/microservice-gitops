@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/bhagyalakshmi35023/microservice-gitops
+    repoURL: https://github.com/bhagyalakshmi35023/microservice-gitops.git
     targetRevision: HEAD
     path: order-service
   destination:
