@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: order-service
-        image: bhagya1304/order-service:1
+        image: bhagya1304/order-service:${IMAGE_TAG}
         ports:
         - containerPort: 3000
 ---
